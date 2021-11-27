@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .info {
   @include display-column;
@@ -46,7 +46,7 @@
   }
 
   &--image {
-    background: url('../../assets/coffees/coffee-background.webp');
+    background: url("https://i.ibb.co/d4DgfTy/coffee-background.webp");
     @include background;
 
     .info__icon {

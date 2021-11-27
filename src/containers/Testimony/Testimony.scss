@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .testimony {
   @include display-column;
@@ -6,7 +6,7 @@
 
   padding: $gap-regular 0 0;
   justify-content: space-between;
-  background-image: url('../../assets/slides/slide-3.webp');
+  background-image: url("https://i.ibb.co/446yZPd/slide-3.webp");
 
   @media only screen and (min-width: $breakpoints-md) {
     min-height: 600px;
