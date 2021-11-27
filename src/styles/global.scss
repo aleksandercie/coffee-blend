@@ -1,0 +1,59 @@
+@import './variables.scss';
+@import './normalize.scss';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 6.25%;
+}
+
+body {
+  padding: 0;
+  background: $c-cod-gray;
+  color: $c-white;
+  line-height: 1.5;
+  font-family: 'Josefin Sans', Arial, sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
+p {
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: $c-white;
+  transition: color 0.5s ease;
+
+  &:hover {
+    color: $c-twine;
+  }
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.scroll--prevent {
+  overflow: hidden;
+}

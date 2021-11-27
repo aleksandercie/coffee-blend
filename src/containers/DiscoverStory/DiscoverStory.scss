@@ -1,0 +1,53 @@
+@import '../../styles/global.scss';
+
+.discover-story {
+  @include display-column;
+
+  position: relative;
+  padding: 0;
+
+  @media only screen and (min-width: $breakpoints-md) {
+    @include display-row;
+  }
+
+  .aos-init.aos-animate {
+    width: 100%;
+  }
+
+  .lazy-load-image-background {
+    @media only screen and (min-width: $breakpoints-md) {
+      width: 50%;
+      height: 600px;
+    }
+
+    @media only screen and (min-width: $breakpoints-xxl) {
+      height: auto;
+    }
+
+    @media only screen and (min-width: $breakpoints-xxxl) {
+      height: 800px;
+      width: 100%;
+      opacity: 0.5;
+      object-position: bottom;
+    }
+  }
+
+  &__container {
+    padding: $gap-regular;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      position: absolute;
+      max-width: 550px;
+      left: 44%;
+      right: $gap-large;
+      top: 20%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    @media only screen and (min-width: $breakpoints-xxxl) {
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import '../../styles/global.scss';
+
+.gallery {
+  padding: 0;
+
+  &__container {
+    @include display-column;
+
+    @media only screen and (min-width: $breakpoints-sm) {
+      @include display-row;
+
+      flex-wrap: wrap;
+    }
+
+    .lazy-load-image-background {
+      @media only screen and (min-width: $breakpoints-sm) {
+        width: 50%;
+      }
+      @media only screen and (min-width: $breakpoints-lg) {
+        width: 25%;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import '../../styles/global.scss';
+
+.banner {
+  margin-top: 78px;
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+
+  @media only screen and (min-width: $breakpoints-md) {
+    margin-top: 78px;
+    height: 750px;
+  }
+
+  &__image {
+    filter: brightness(50%);
+  }
+
+  &__container {
+    padding: $gap-small;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: $animation-mobile-banner;
+    max-width: 600px;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      animation: $animation-desktop;
+    }
+
+    &--slider {
+      animation: $animation-mobile-slider;
+    }
+  }
+
+  &__title {
+    font-size: 20rem;
+    overflow: auto;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      font-size: 32rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 32rem;
+    overflow: auto;
+    margin-bottom: $gap-xsmall;
+    text-align: center;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      font-size: 48rem;
+    }
+  }
+
+  &__description {
+    font-size: 15rem;
+    overflow: auto;
+    margin: $gap-regular auto;
+    text-align: center;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      font-size: 20rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: $gap-large;
+    overflow: auto;
+  }
+}

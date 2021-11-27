@@ -1,0 +1,29 @@
+@import '../../styles/global.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 $gap-regular;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: $border;
+  background-color: $c-cod-gray;
+  z-index: $z-index-header;
+  box-sizing: border-box;
+
+  @media only screen and (min-width: $breakpoints-md) {
+    justify-content: space-around;
+    padding: 0 $gap-small;
+  }
+
+  &__icon {
+    &--hamburger {
+      font-size: 18rem;
+      @media only screen and (min-width: $breakpoints-md) {
+        display: none;
+      }
+    }
+  }
+}

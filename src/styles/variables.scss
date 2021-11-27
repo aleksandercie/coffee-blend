@@ -1,0 +1,132 @@
+@use 'sass:math';
+
+/* Base Colors
+************************************************************** */
+
+$c-white: #fff;
+$c-black: #000000;
+$c-red: #b33a3a;
+$c-cod-gray: #120f0f;
+$c-nobel: #b5b5b5;
+$c-twine: #c49b63;
+
+/* Borders
+************************************************************** */
+
+$border: 1px solid rgba(255, 255, 255, 0.1);
+$border-white: 1px solid $c-white;
+$border-black: 1px solid $c-cod-gray;
+$border-twine: 1px solid $c-twine;
+$border-nobel: 1px solid $c-nobel;
+
+/* Paddings, Margins
+************************************************************** */
+
+$gap-xxsmall: 5px;
+$gap-xsmall: 10px;
+$gap-small: 15px;
+$gap-regular: 20px;
+$gap-large: 30px;
+$gap-xlarge: 40px;
+$gap-xxlarge: 50px;
+
+/* Z-index
+************************************************************** */
+
+$z-index: 2;
+$z-index-mobile-menu: 5;
+$z-index-header: 10;
+$z-index-hamburger: 20;
+
+/* Wrappers
+************************************************************** */
+
+$wrapper: 1400px;
+$wrapper-middle: 1200px;
+$wrapper-mobile: 480px;
+
+/* Breakpoints
+************************************************************** */
+
+$breakpoints-xs: 480px;
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 992px;
+$breakpoints-xl: 1200px;
+$breakpoints-xxl: 1550px;
+$breakpoints-xxxl: 2450px;
+
+/* Opacity
+************************************************************** */
+$opacity-off: 0;
+$opacity-on: 1;
+
+/* Mixins
+************************************************************** */
+
+@mixin start-animation {
+  top: 70%;
+  opacity: $opacity-off;
+}
+
+@mixin background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+@mixin display-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin display-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin display-center {
+  align-items: center;
+  justify-content: center;
+}
+
+/* Keyframes
+************************************************************** */
+
+@keyframes fade-in-mobile-Banner {
+  from {
+    @include start-animation;
+  }
+  to {
+    opacity: $opacity-on;
+    top: 30%;
+  }
+}
+
+@keyframes fade-in-mobile-slider {
+  from {
+    @include start-animation;
+  }
+  to {
+    opacity: $opacity-on;
+    top: 5%;
+  }
+}
+
+@keyframes fade-in-desktop {
+  from {
+    @include start-animation;
+  }
+  to {
+    opacity: $opacity-on;
+    top: 25%;
+  }
+}
+
+/* animations
+************************************************************** */
+
+$animation-mobile-banner: fade-in-mobile-Banner 1.2s normal forwards ease-in-out;
+$animation-mobile-slider: fade-in-mobile-slider 1.2s normal forwards ease-in-out;
+$animation-desktop: fade-in-desktop 1.2s normal forwards ease-in-out;

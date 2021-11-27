@@ -1,0 +1,23 @@
+@import '../../styles/global.scss';
+
+.filter {
+  margin: $gap-large 0;
+  @include display-column;
+
+  @media only screen and (min-width: $breakpoints-sm) {
+    @include display-row;
+
+    justify-content: center;
+  }
+  &__button {
+    text-align: left;
+
+    @media only screen and (min-width: $breakpoints-sm) {
+      text-align: center;
+    }
+    &--active {
+      background-color: $c-twine;
+      color: $c-cod-gray;
+    }
+  }
+}

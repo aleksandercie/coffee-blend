@@ -1,0 +1,23 @@
+@import '../../styles/global.scss';
+
+.footer {
+  &__title {
+    margin-bottom: $gap-regular;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    margin: $gap-regular 0;
+  }
+
+  &__socials {
+    margin: $gap-regular 0;
+    svg {
+      cursor: pointer;
+      transition: color 0.5s ease;
+      &:hover {
+        color: $c-twine;
+      }
+    }
+  }
+}

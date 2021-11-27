@@ -1,0 +1,24 @@
+@import '../../styles/global.scss';
+
+.testimony {
+  @include display-column;
+  @include background;
+
+  padding: $gap-regular 0 0;
+  justify-content: space-between;
+  background-image: url('../../assets/slides/slide-3.webp');
+
+  @media only screen and (min-width: $breakpoints-md) {
+    min-height: 600px;
+  }
+
+  &__container {
+    max-width: 340px;
+    padding: 0 $gap-regular;
+    margin: 0 auto;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      margin: $gap-regular auto;
+    }
+  }
+}

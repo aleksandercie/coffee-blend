@@ -1,0 +1,49 @@
+@import '../../styles/global.scss';
+
+.discover-menu {
+  @include display-column;
+
+  @media only screen and (min-width: $breakpoints-md) {
+    @include display-row;
+    @include display-center;
+  }
+
+  &__container {
+    padding: $gap-large 0;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      max-width: 500px;
+      min-width: 300px;
+      margin: 0 $gap-xsmall;
+    }
+  }
+
+  &__button {
+    margin: $gap-regular 0;
+    display: inline-block;
+  }
+
+  &__images {
+    @include display-column;
+    @include display-center;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      @include display-row;
+
+      max-width: 540px;
+      flex-wrap: wrap;
+      :nth-child(even) {
+        top: $gap-regular;
+      }
+    }
+  }
+  .lazy-load-image-background {
+    margin: $gap-xsmall 0;
+    position: relative;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      width: 40%;
+      margin: $gap-regular;
+    }
+  }
+}

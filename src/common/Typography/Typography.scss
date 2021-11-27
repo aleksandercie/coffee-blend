@@ -1,0 +1,64 @@
+@import '../../styles/global.scss';
+
+.typography {
+  &--title {
+    font-size: 28rem;
+    margin: 0;
+    text-transform: uppercase;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      font-size: 48rem;
+    }
+  }
+
+  &--subtitle {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48rem;
+    color: $c-twine;
+    margin: 0 0 -12px;
+    z-index: $z-index;
+    position: relative;
+  }
+
+  &--description {
+    margin: $gap-small 0;
+    font-size: 16rem;
+    color: $c-nobel;
+
+    @media only screen and (min-width: $breakpoints-xxl) {
+      font-size: 18rem;
+    }
+  }
+
+  &--name {
+    font-size: 18rem;
+
+    @media only screen and (min-width: $breakpoints-xxl) {
+      font-size: 20rem;
+    }
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--black {
+    color: $c-cod-gray;
+  }
+
+  &--grey {
+    color: $c-nobel;
+  }
+
+  &--dark-grey {
+    color: $c-cod-gray;
+  }
+
+  &--twine {
+    color: $c-twine;
+  }
+}

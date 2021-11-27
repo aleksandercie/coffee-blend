@@ -1,0 +1,7 @@
+@import '../../styles/global.scss';
+
+.container {
+  &--section {
+    padding: $gap-xxlarge $gap-regular;
+  }
+}

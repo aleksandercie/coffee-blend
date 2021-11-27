@@ -1,0 +1,22 @@
+@import '../../styles/global.scss';
+
+.slider {
+  padding: 0;
+
+  &__container {
+    .slick-dots {
+      bottom: $gap-xlarge;
+
+      li {
+        button:before {
+          color: $c-white;
+          font-size: 16rem;
+
+          @media only screen and (min-width: $breakpoints-xxl) {
+            font-size: 20rem;
+          }
+        }
+      }
+    }
+  }
+}

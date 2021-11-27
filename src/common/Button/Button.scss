@@ -1,0 +1,94 @@
+@import '../../styles/global.scss';
+
+.button {
+  padding: $gap-xsmall;
+  margin: $gap-xsmall;
+  font-size: 14rem;
+  cursor: pointer;
+  border: none;
+  transition: color 0.15s ease-in-out;
+
+  @media only screen and (min-width: $breakpoints-md) {
+    padding: $gap-regular;
+  }
+
+  @media only screen and (min-width: $breakpoints-xxl) {
+    font-size: 18rem;
+  }
+
+  &--primary {
+    background-color: $c-twine;
+    color: $c-cod-gray;
+    border: $border-twine;
+
+    &:hover {
+      background-color: transparent;
+      color: $c-twine;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: $c-white;
+    border: $border-white;
+
+    &:hover {
+      background-color: $c-twine;
+      color: $c-cod-gray;
+      border: $border-twine;
+    }
+  }
+
+  &--tertiary {
+    background-color: transparent;
+    color: $c-twine;
+    border: $border-twine;
+
+    &:hover {
+      background-color: $c-twine;
+      color: $c-white;
+    }
+  }
+
+  &--banner {
+    background-color: transparent;
+    color: $c-nobel;
+    font-size: 16rem;
+    text-transform: uppercase;
+    padding: $gap-xxsmall $gap-xsmall;
+    border-bottom: $border-nobel;
+
+    &:hover {
+      color: $c-twine;
+      border-bottom: $border-twine;
+    }
+  }
+
+  &--appointment {
+    background-color: $c-white;
+    color: $c-black;
+    border: $border-white;
+
+    @media only screen and (min-width: $breakpoints-xl) {
+      border: none;
+    }
+
+    &:hover {
+      background-color: $c-black;
+      color: $c-white;
+    }
+  }
+
+  &--filter {
+    font-size: 18rem;
+    text-transform: capitalize;
+    background-color: transparent;
+    color: $c-twine;
+    border-bottom: $border-twine;
+
+    &:hover {
+      background-color: $c-twine;
+      color: $c-cod-gray;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../styles/global.scss';
+
+.detail {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 430px;
+
+  svg {
+    margin-right: $gap-regular;
+    font-size: 24rem;
+    color: $c-twine;
+  }
+}

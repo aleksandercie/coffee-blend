@@ -1,0 +1,59 @@
+@import '../../styles/global.scss';
+
+.info {
+  @include display-column;
+  @include display-center;
+
+  background-color: $c-twine;
+
+  @media only screen and (min-width: $breakpoints-md) {
+    @include display-row;
+
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    max-width: 300px;
+    padding: $gap-regular;
+  }
+
+  &__icon {
+    @include display-row;
+    @include display-center;
+
+    transform: rotate(45deg);
+    height: 100px;
+    width: 100px;
+    border: $border-black;
+    margin: $gap-regular auto;
+    border-radius: 8px;
+
+    svg {
+      transform: rotate(-45deg);
+      font-size: 32rem;
+      color: $c-cod-gray;
+    }
+  }
+
+  &__title {
+    margin-top: $gap-xxlarge;
+    text-align: center;
+    font-size: 18rem;
+  }
+
+  &__description {
+    text-align: center;
+  }
+
+  &--image {
+    background: url('../../assets/coffees/coffee-background.webp');
+    @include background;
+
+    .info__icon {
+      border: $border-twine;
+      svg {
+        color: $c-twine;
+      }
+    }
+  }
+}

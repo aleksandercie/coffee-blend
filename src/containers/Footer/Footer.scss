@@ -1,0 +1,78 @@
+@import '../../styles/global.scss';
+
+.footer {
+  @include display-column;
+  @include display-center;
+
+  background-color: $c-cod-gray;
+  padding: $gap-large;
+  font-size: 16rem;
+
+  @media only screen and (min-width: $breakpoints-lg) {
+    @include display-row;
+
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  @media only screen and (min-width: $breakpoints-xxl) {
+    font-size: 20rem;
+  }
+
+  &__container {
+    @include display-column;
+
+    width: 100%;
+    max-width: 430px;
+    margin: $gap-small auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @media only screen and (min-width: $breakpoints-lg) {
+      width: 28%;
+      margin: $gap-small 0;
+    }
+
+    &:nth-child(3) {
+      @media only screen and (min-width: $breakpoints-lg) {
+        width: 15%;
+      }
+    }
+
+    svg {
+      margin-right: $gap-regular;
+      font-size: 24rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: $gap-regular;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    margin: $gap-regular 0;
+  }
+
+  &__socials {
+    margin: $gap-regular 0;
+    svg {
+      cursor: pointer;
+      transition: color 0.5s ease;
+      &:hover {
+        color: $c-twine;
+      }
+    }
+  }
+
+  &__button {
+    padding: $gap-xxsmall $gap-xxsmall $gap-xxsmall 0;
+    margin: $gap-xxsmall 0;
+    font-size: 16rem;
+    font-weight: 300;
+
+    @media only screen and (min-width: $breakpoints-xxl) {
+      font-size: 18rem;
+    }
+  }
+}

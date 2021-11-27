@@ -1,0 +1,48 @@
+@import '../../styles/global.scss';
+
+.products {
+  @include display-column;
+
+  max-width: $wrapper;
+  margin: $gap-large auto;
+
+  @media only screen and (min-width: $breakpoints-md) {
+    @include display-row;
+
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.product {
+  @include display-column;
+
+  &--row-4 {
+    @media only screen and (min-width: $breakpoints-md) {
+      width: 22%;
+      margin: 0 $gap-xsmall;
+    }
+  }
+
+  &--row-3 {
+    @include display-center;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      width: 46%;
+      margin: 0 $gap-xsmall;
+    }
+
+    @media only screen and (min-width: $breakpoints-lg) {
+      width: 30%;
+    }
+  }
+
+  &__name,
+  &__price {
+    margin: $gap-xsmall;
+  }
+
+  &__price {
+    margin: $gap-regular 0;
+  }
+}

@@ -1,0 +1,46 @@
+@import '../../styles/global.scss';
+
+.opinions {
+  @include display-column;
+
+  margin: $gap-large auto 0;
+
+  @media only screen and (min-width: $breakpoints-md) {
+    @include display-row;
+
+    align-items: flex-end;
+  }
+}
+.opinion {
+  padding: $gap-regular;
+  background-color: $c-twine;
+  font-size: 16rem;
+
+  @media only screen and (min-width: $breakpoints-md) {
+    width: 20%;
+    height: fit-content;
+  }
+
+  &:nth-child(even) {
+    filter: brightness(90%);
+  }
+
+  &__customer {
+    margin: $gap-regular 0 0;
+    font-size: 14rem;
+
+    @media only screen and (min-width: $breakpoints-xxl) {
+      font-size: 18rem;
+    }
+  }
+
+  &__city {
+    margin: $gap-xsmall 0;
+    font-size: 12rem;
+    opacity: 0.6;
+
+    @media only screen and (min-width: $breakpoints-xxl) {
+      font-size: 16rem;
+    }
+  }
+}

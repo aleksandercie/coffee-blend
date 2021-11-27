@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { ContextReservation } from "./context/Context.js";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ScrollToTop from "./hooks/ScrollToTop";
+import Header from "./containers/Header/Header";
+import Footer from "./containers/Footer/Footer";
+import Homepage from "./pages/Homepage/Homepage";
+import MenuPage from "./pages/MenuPage/MenuPage";
+import ServicesPage from "./pages/ServicesPage/ServicesPage";
+import AboutPage from "./pages/AboutPage/AboutPage";
+import ContactPage from "./pages/ContactPage/ContactPage";
+import { reservation } from "./content/reservation";
+import "./styles/global.scss";
 
-function App() {
+const App = () => {
+  const [reservationContext, setReservationContext] = useState(reservation);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <BrowserRouter>
+      <ScrollToTop />
+      <>
+        <ContextReservation.Provider
+          value={[reservationContext, setReservationContext]}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Header />
+          <Routes>
+            <Route exact path="/coffee-blend/" element={<Homepage />} />
+            <Route path="/coffee-blend/menu" element={<MenuPage />} />
+            <Route path="/coffee-blend/services" element={<ServicesPage />} />
+            <Route path="/coffee-blend/about" element={<AboutPage />} />
+            <Route path="/coffee-blend/contact" element={<ContactPage />} />
+          </Routes>
+          <Footer />
+        </ContextReservation.Provider>
+      </>
+    </BrowserRouter>
   );
-}
-
+};
 export default App;

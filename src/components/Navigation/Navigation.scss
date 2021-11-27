@@ -1,0 +1,41 @@
+@import '../../styles/global.scss';
+
+.navigation {
+  &--mobile {
+    @include display-column;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    margin: $gap-small;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      margin: 0 $gap-xsmall;
+    }
+  }
+  &__link {
+    padding: $gap-regular;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 14rem;
+
+    @media only screen and (min-width: $breakpoints-xxl) {
+      font-size: 18rem;
+    }
+  }
+
+  &__link.active {
+    color: $c-twine;
+  }
+}

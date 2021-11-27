@@ -1,0 +1,149 @@
+@import "../../styles/global.scss";
+
+.form {
+  @include display-column;
+  @include display-center;
+
+  padding: $gap-regular;
+  background-color: $c-black;
+
+  &__title {
+    text-align: center;
+    font-size: 20rem;
+  }
+
+  &__container {
+    position: relative;
+    display: grid;
+    width: 90%;
+    transition: transform 0.5s, opacity 0.3s, max-height 2s;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $gap-regular;
+      max-width: 900px;
+    }
+
+    &--hide {
+      transform: scale(0);
+      max-height: 0;
+      opacity: 0;
+    }
+  }
+
+  &__label {
+    font-size: 0;
+    color: transparent;
+  }
+
+  &__input {
+    height: 78px;
+
+    input,
+    select {
+      width: 100%;
+      padding: $gap-xsmall;
+      margin-top: $gap-small;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 15rem;
+      height: 40px;
+      border-bottom: $border-white;
+      color: $c-white;
+      box-sizing: border-box;
+
+      @media only screen and (min-width: $breakpoints-xxl) {
+        font-size: 18rem;
+      }
+
+      &::-webkit-input-placeholder {
+        color: $c-white;
+        opacity: 1;
+      }
+
+      &:-moz-placeholder {
+        color: $c-white;
+        opacity: 1;
+      }
+
+      &::-moz-placeholder {
+        color: $c-white;
+        opacity: 1;
+      }
+
+      &:-ms-input-placeholder {
+        color: $c-white;
+        opacity: 1;
+      }
+
+      &::-ms-input-placeholder {
+        color: $c-white;
+        opacity: 1;
+      }
+
+      &::placeholder {
+        color: $c-white;
+        opacity: 1;
+      }
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+      border-radius: 4px;
+      margin-right: 2px;
+      opacity: 1;
+      color: $c-white;
+      filter: invert(1);
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator:hover {
+      opacity: 1;
+    }
+
+    input[type="date"] {
+      -webkit-appearance: none;
+    }
+
+    option {
+      &:first-child {
+        display: none;
+      }
+
+      color: $c-black;
+    }
+  }
+
+  &__validation {
+    color: $c-red;
+    font-size: 12rem;
+    margin: $gap-xxsmall 0 $gap-regular;
+
+    @media only screen and (min-width: $breakpoints-xxl) {
+      font-size: 14rem;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin: $gap-large auto;
+
+    @media only screen and (min-width: $breakpoints-md) {
+      grid-column: 2;
+      grid-row: 4;
+    }
+  }
+
+  &__success {
+    position: relative;
+    top: 30%;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.7s;
+
+    &--active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
