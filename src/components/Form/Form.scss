@@ -93,25 +93,24 @@
     }
 
     input[type="date"] {
-      color: $c-white;
-      border-radius: none;
-    }
-
-    input[type="date"]::-webkit-calendar-picker-indicator {
-      cursor: pointer;
-
-      margin-right: 2px;
-      opacity: 1;
-      color: $c-white;
-      filter: invert(1);
-    }
-
-    input[type="date"]::-webkit-calendar-picker-indicator:hover {
-      opacity: 1;
-    }
-
-    input[type="date"] {
       -webkit-appearance: none;
+      border-radius: none;
+
+      &::-webkit-datetime-edit-fields-wrapper {
+        color: $c-white;
+      }
+
+      &::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+        margin-right: 2px;
+        opacity: 1;
+        color: $c-white;
+        filter: invert(1);
+      }
+
+      &::-webkit-calendar-picker-indicator:hover {
+        opacity: 1;
+      }
     }
 
     option {
