@@ -7,7 +7,12 @@ const Hamburger = ({ toggleMenu, isOpen }) => {
     "hamburger--active": isOpen,
   });
   return (
-    <button onClick={toggleMenu} className={hamburgerClasses} alt="menu-icon">
+    <button
+      onClick={toggleMenu}
+      className={hamburgerClasses}
+      alt="menu-icon"
+      aria-label="menu-icon"
+    >
       <span className="hamburger__bar" />
       <span className="hamburger__bar" />
       <span className="hamburger__bar" />
