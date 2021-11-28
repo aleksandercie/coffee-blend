@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .banner {
   margin-top: 78px;
@@ -51,6 +51,7 @@
     overflow: auto;
     margin-bottom: $gap-xsmall;
     text-align: center;
+    overflow: hidden;
 
     @media only screen and (min-width: $breakpoints-md) {
       font-size: 48rem;
