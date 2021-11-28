@@ -46,7 +46,10 @@
       margin-top: $gap-small;
       background: transparent;
       border: none;
-      border-radius: none;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
       outline: none;
       font-size: 15rem;
       height: 40px;
