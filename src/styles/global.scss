@@ -1,7 +1,8 @@
-@import './variables.scss';
-@import './normalize.scss';
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import "./variables.scss";
+@import "./normalize.scss";
+@import "./fonts.scss";
+// @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 html {
   box-sizing: border-box;
@@ -14,7 +15,7 @@ body {
   background: $c-cod-gray;
   color: $c-white;
   line-height: 1.5;
-  font-family: 'Josefin Sans', Arial, sans-serif;
+  font-family: "Josefin Sans", Arial, sans-serif;
 }
 
 ul {
