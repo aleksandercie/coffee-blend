@@ -88,9 +88,13 @@
       }
     }
 
+    input[type="date"] {
+      color: $c-white;
+    }
+
     input[type="date"]::-webkit-calendar-picker-indicator {
       cursor: pointer;
-      border-radius: 4px;
+      border-radius: none;
       margin-right: 2px;
       opacity: 1;
       color: $c-white;
