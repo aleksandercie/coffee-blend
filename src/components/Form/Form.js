@@ -31,7 +31,7 @@ const Form = ({ btnVariant }) => {
           email: "",
           name: "",
           phone: "",
-          date: "",
+          date: currentDate,
           time: "",
           guest: "",
         }}

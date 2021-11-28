@@ -1,15 +1,15 @@
 @import "../../styles/global.scss";
 
 .testimony {
-  @include display-column;
-  @include background;
-
   padding: $gap-regular 0 0;
   justify-content: space-between;
   background-image: url("https://i.ibb.co/446yZPd/slide-3.webp");
+  @include display-column;
+  @include background;
 
   @media only screen and (min-width: $breakpoints-md) {
     min-height: 600px;
+    background-attachment: fixed;
   }
 
   &__container {

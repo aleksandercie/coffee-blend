@@ -49,6 +49,10 @@
     background: url("https://i.ibb.co/d4DgfTy/coffee-background.webp");
     @include background;
 
+    @media only screen and (min-width: $breakpoints-md) {
+      background-attachment: fixed;
+    }
+
     .info__icon {
       border: $border-twine;
       svg {
