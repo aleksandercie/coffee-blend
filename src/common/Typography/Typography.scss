@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .typography {
   &--title {
@@ -12,7 +12,7 @@
   }
 
   &--subtitle {
-    font-family: 'Great Vibes', cursive;
+    font-family: "Brush Script MT", cursive;
     font-size: 48rem;
     color: $c-twine;
     margin: 0 0 -12px;

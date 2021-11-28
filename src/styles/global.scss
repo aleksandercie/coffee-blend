@@ -1,6 +1,5 @@
 @import "./variables.scss";
 @import "./normalize.scss";
-@import "./fonts.scss";
 
 html {
   box-sizing: border-box;
@@ -10,11 +9,10 @@ html {
 
 body {
   padding: 0;
-  margin: 0;
   background: $c-cod-gray;
   color: $c-white;
   line-height: 1.5;
-  font-family: "Josefin Sans", Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 ul {
