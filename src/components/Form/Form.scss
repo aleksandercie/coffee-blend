@@ -111,6 +111,10 @@
       &::-webkit-calendar-picker-indicator:hover {
         opacity: 1;
       }
+
+      &::-webkit-datetime-edit {
+        text-align: left;
+      }
     }
 
     option {
