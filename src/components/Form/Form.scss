@@ -87,10 +87,8 @@
     }
 
     input[type="date"] {
-      display: block;
       -webkit-appearance: none;
       border-radius: none;
-      padding-right: 100px;
 
       &::-webkit-datetime-edit-fields-wrapper {
         color: $c-white;
