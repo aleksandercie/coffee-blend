@@ -9,7 +9,7 @@
     "static/css/2.6396a1a6.chunk.css": "/coffee-blend/static/css/2.6396a1a6.chunk.css",
     "static/js/2.e624c8e4.chunk.js": "/coffee-blend/static/js/2.e624c8e4.chunk.js",
     "static/js/2.e624c8e4.chunk.js.map": "/coffee-blend/static/js/2.e624c8e4.chunk.js.map",
-    "main.css": "/coffee-blend/static/css/main.0d693a26.chunk.css",
+    "main.css": "/coffee-blend/static/css/main.9b76c109.chunk.css",
     "main.js": "/coffee-blend/static/js/main.55a5b621.chunk.js",
     "main.js.map": "/coffee-blend/static/js/main.55a5b621.chunk.js.map",
     "runtime-main.js": "/coffee-blend/static/js/runtime-main.30256cc4.js",
@@ -32,7 +32,7 @@
     "static/css/5.26954c5b.chunk.css.map": "/coffee-blend/static/css/5.26954c5b.chunk.css.map",
     "static/css/6.72c376af.chunk.css.map": "/coffee-blend/static/css/6.72c376af.chunk.css.map",
     "static/css/7.da801cff.chunk.css.map": "/coffee-blend/static/css/7.da801cff.chunk.css.map",
-    "static/css/main.0d693a26.chunk.css.map": "/coffee-blend/static/css/main.0d693a26.chunk.css.map",
+    "static/css/main.9b76c109.chunk.css.map": "/coffee-blend/static/css/main.9b76c109.chunk.css.map",
     "static/js/5.dd7845e1.chunk.js.LICENSE.txt": "/coffee-blend/static/js/5.dd7845e1.chunk.js.LICENSE.txt",
     "static/media/slick-theme.css": "/coffee-blend/static/media/slick.c94f7671.ttf"
   },
@@ -40,7 +40,7 @@
     "static/js/runtime-main.30256cc4.js",
     "static/css/5.26954c5b.chunk.css",
     "static/js/5.dd7845e1.chunk.js",
-    "static/css/main.0d693a26.chunk.css",
+    "static/css/main.9b76c109.chunk.css",
     "static/js/main.55a5b621.chunk.js"
   ]
 }
