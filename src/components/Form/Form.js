@@ -131,24 +131,6 @@ const Form = ({ btnVariant }) => {
             </Container>
 
             <Container customClass="form__input">
-              <label name="date" className="form__label">
-                Date
-                <Field
-                  type="date"
-                  name="date"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.date}
-                  min={currentDate}
-                  max="2022-12-31"
-                />
-              </label>
-              <span className="form__validation">
-                {errors.date && touched.date && errors.date}
-              </span>
-            </Container>
-
-            <Container customClass="form__input">
               <label name="time" className="form__label">
                 Time
                 <Field component="select" name="time">
@@ -185,6 +167,24 @@ const Form = ({ btnVariant }) => {
               </label>
               <span className="form__validation">
                 {errors.guest && touched.guest && errors.guest}
+              </span>
+            </Container>
+
+            <Container customClass="form__input">
+              <label name="date" className="form__label">
+                Date
+                <Field
+                  type="date"
+                  name="date"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.date}
+                  min={currentDate}
+                  max="2022-12-31"
+                />
+              </label>
+              <span className="form__validation">
+                {errors.date && touched.date && errors.date}
               </span>
             </Container>
             <Button
