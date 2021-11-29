@@ -1,13 +1,13 @@
-import React from 'react';
-import classNames from 'classnames';
-import Container from '../../common/Container/Container';
-import Typography from '../../common/Typography/Typography';
-import LazyImage from '../../common/LazyImage/LazyImage';
-import { trackWindowScroll } from 'react-lazy-load-image-component';
-import './Products.scss';
+import React from "react";
+import classNames from "classnames";
+import Container from "../../common/Container/Container";
+import Typography from "../../common/Typography/Typography";
+import Image from "../../common/Image/Image";
+import { trackWindowScroll } from "react-lazy-load-image-component";
+import "./Products.scss";
 
 const Products = ({ products, variant }) => {
-  const productClasses = classNames('product', {
+  const productClasses = classNames("product", {
     [`product--${variant}`]: variant,
   });
 
@@ -15,7 +15,7 @@ const Products = ({ products, variant }) => {
     const { name, description, price, image } = item;
     return (
       <Container customClass={productClasses} key={index}>
-        <LazyImage image={image} alt="product" />
+        <Image image={image} alt="product" />
         <Typography
           customClass="product__name"
           variant="h3"

@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .gallery {
   padding: 0;
@@ -11,14 +11,13 @@
 
       flex-wrap: wrap;
     }
-
-    .lazy-load-image-background {
-      @media only screen and (min-width: $breakpoints-sm) {
-        width: 50%;
-      }
-      @media only screen and (min-width: $breakpoints-lg) {
-        width: 25%;
-      }
+  }
+  &__image {
+    @media only screen and (min-width: $breakpoints-sm) {
+      width: 50%;
+    }
+    @media only screen and (min-width: $breakpoints-lg) {
+      width: 25%;
     }
   }
 }

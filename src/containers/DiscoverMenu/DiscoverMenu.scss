@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .discover-menu {
   @include display-column;
@@ -37,7 +37,7 @@
       }
     }
   }
-  .lazy-load-image-background {
+  &__image {
     margin: $gap-xsmall 0;
     position: relative;
 

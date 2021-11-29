@@ -14,7 +14,7 @@
     width: 100%;
   }
 
-  .lazy-load-image-background {
+  &__image {
     width: 100%;
 
     @media only screen and (min-width: $breakpoints-md) {

@@ -1,12 +1,12 @@
-import React from 'react';
-import FadeIn from '../../components/FadeIn/FadeIn';
-import { trackWindowScroll } from 'react-lazy-load-image-component';
-import Container from '../../common/Container/Container';
-import Heading from '../../components/Heading/Heading';
-import Button from '../../common/Button/Button';
-import LazyImage from '../../common/LazyImage/LazyImage';
-import { discoverMenu } from '../../content/discover-menu';
-import './DiscoverMenu.scss';
+import React from "react";
+import FadeIn from "../../components/FadeIn/FadeIn";
+import { trackWindowScroll } from "react-lazy-load-image-component";
+import Container from "../../common/Container/Container";
+import Heading from "../../components/Heading/Heading";
+import Button from "../../common/Button/Button";
+import Image from "../../common/Image/Image";
+import { discoverMenu } from "../../content/discover-menu";
+import "./DiscoverMenu.scss";
 
 const DiscoverMenu = () => {
   const {
@@ -28,7 +28,12 @@ const DiscoverMenu = () => {
       </FadeIn>
       <Container customClass="discover-menu__images">
         {images.map((image, index) => (
-          <LazyImage image={image} key={index} alt="coffee" />
+          <Image
+            image={image}
+            key={index}
+            alt="coffee"
+            customClass="discover-menu__image"
+          />
         ))}
       </Container>
     </Container>

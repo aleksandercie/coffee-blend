@@ -1,14 +1,19 @@
-import React from 'react';
-import FadeIn from '../../components/FadeIn/FadeIn';
-import { trackWindowScroll } from 'react-lazy-load-image-component';
-import Container from '../../common/Container/Container';
-import LazyImage from '../../common/LazyImage/LazyImage';
-import { gallery } from '../../content/gallery';
-import './Gallery.scss';
+import React from "react";
+import FadeIn from "../../components/FadeIn/FadeIn";
+import { trackWindowScroll } from "react-lazy-load-image-component";
+import Container from "../../common/Container/Container";
+import Image from "../../common/Image/Image";
+import { gallery } from "../../content/gallery";
+import "./Gallery.scss";
 
 const Gallery = () => {
   const renderImages = gallery.map((image, index) => (
-    <LazyImage image={image} key={index} alt="gallery" />
+    <Image
+      image={image}
+      key={index}
+      alt="gallery"
+      customClass="gallery__image"
+    />
   ));
   return (
     <Container customClass="gallery" variant>
