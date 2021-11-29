@@ -120,11 +120,16 @@
     }
 
     option {
+      color: $c-black;
+      text-align: center;
+
+      @media only screen and (min-width: $breakpoints-lg) {
+        text-align: left;
+      }
+
       &:first-child {
         display: none;
       }
-
-      color: $c-black;
     }
   }
 
