@@ -1,22 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import classNames from "classnames";
 import Container from "../../common/Container/Container";
 import Typography from "../../common/Typography/Typography";
 import Button from "../../common/Button/Button";
 import Image from "../../common/Image/Image";
-import { isBrowser } from "../../helpers/isBrowser";
-import { MOBILE_WIDTH } from "./constants";
+
 import "./Banner.scss";
 
 const Banner = ({ banner, slider }) => {
-  const [windowWidth, setWindowWidth] = useState();
-
-  useEffect(() => {
-    if (!isBrowser()) return;
-    const getWindowWidth = window.innerWidth;
-    setWindowWidth(getWindowWidth);
-  }, [windowWidth]);
-
   const { photo, title, buttons, subtitle, description } = banner;
 
   const bannerClasses = classNames("banner__container", {
@@ -54,11 +45,7 @@ const Banner = ({ banner, slider }) => {
 
   return (
     <Container customClass="banner" arriaHidden>
-      <Image
-        image={windowWidth < MOBILE_WIDTH ? photo.mobile : photo.desktop}
-        alt="slide"
-        customClass="banner__image"
-      />
+      <Image image={photo} alt="slide" customClass="banner__image" />
       <Container customClass={bannerClasses}>
         {renderSubtitle}
         <Typography variant="h1" customClass="banner__title">
