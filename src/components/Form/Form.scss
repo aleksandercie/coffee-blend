@@ -87,6 +87,8 @@
     }
 
     input[type="date"] {
+      display: block;
+      text-align: left;
       -webkit-appearance: none;
       border-radius: none;
 
