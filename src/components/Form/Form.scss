@@ -56,11 +56,6 @@
       border-bottom: $border-white;
       color: $c-white;
       box-sizing: border-box;
-      text-align: center;
-
-      @media only screen and (min-width: $breakpoints-lg) {
-        text-align: left;
-      }
 
       @media only screen and (min-width: $breakpoints-xxl) {
         font-size: 18rem;
@@ -95,15 +90,8 @@
       -webkit-appearance: none;
       border-radius: none;
 
-      &::-webkit-datetime-edit {
-        text-align: left;
-      }
-
       &::-webkit-datetime-edit-fields-wrapper {
         color: $c-white;
-        position: relative;
-        text-align: left;
-        left: 0;
       }
 
       &::-webkit-calendar-picker-indicator {
@@ -116,20 +104,6 @@
 
       &::-webkit-calendar-picker-indicator:hover {
         opacity: 1;
-      }
-    }
-
-    select {
-      text-align-last: center;
-      text-align: center;
-      -ms-text-align-last: center;
-      -moz-text-align-last: center;
-
-      @media only screen and (min-width: $breakpoints-lg) {
-        text-align-last: left;
-        text-align: left;
-        -ms-text-align-last: left;
-        -moz-text-align-last: left;
       }
     }
 
