@@ -5,7 +5,7 @@ import Hamburger from "../../components/Hamburger/Hamburger";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
 import { navigation } from "../../content/navigation";
 import { APPLY_PREVENT_SCROLL_BODY_CLASS } from "./constants";
-import { isBrowser } from "../../helpers/isBrowser";
+import { isBrowser } from "../../utils/isBrowser";
 import "./Header.scss";
 
 const Header = () => {
