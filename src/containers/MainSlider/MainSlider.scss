@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .slider {
   padding: 0;
@@ -10,10 +10,10 @@
       li {
         button:before {
           color: $c-white;
-          font-size: 16rem;
+          font-size: 1.6rem;
 
           @media only screen and (min-width: $breakpoints-xxl) {
-            font-size: 20rem;
+            font-size: 2rem;
           }
         }
       }

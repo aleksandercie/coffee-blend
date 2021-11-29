@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .detail {
   display: flex;
@@ -8,7 +8,7 @@
 
   svg {
     margin-right: $gap-regular;
-    font-size: 24rem;
+    font-size: 2.4rem;
     color: $c-twine;
   }
 }

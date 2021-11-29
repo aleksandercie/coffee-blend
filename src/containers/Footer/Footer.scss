@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .footer {
   @include display-column;
@@ -6,7 +6,7 @@
 
   background-color: $c-cod-gray;
   padding: $gap-large;
-  font-size: 16rem;
+  font-size: 1.6rem;
 
   @media only screen and (min-width: $breakpoints-lg) {
     @include display-row;
@@ -16,7 +16,7 @@
   }
 
   @media only screen and (min-width: $breakpoints-xxl) {
-    font-size: 20rem;
+    font-size: 2rem;
   }
 
   &__container {
@@ -41,7 +41,7 @@
 
     svg {
       margin-right: $gap-regular;
-      font-size: 24rem;
+      font-size: 2.4rem;
     }
   }
 
@@ -68,11 +68,11 @@
   &__button {
     padding: $gap-xxsmall $gap-xxsmall $gap-xxsmall 0;
     margin: $gap-xxsmall 0;
-    font-size: 16rem;
+    font-size: 1.6rem;
     font-weight: 300;
 
     @media only screen and (min-width: $breakpoints-xxl) {
-      font-size: 18rem;
+      font-size: 1.8rem;
     }
   }
 }

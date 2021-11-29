@@ -9,7 +9,7 @@
 
   &__title {
     text-align: center;
-    font-size: 20rem;
+    font-size: 2rem;
   }
 
   &__container {
@@ -51,14 +51,14 @@
       -webkit-box-shadow: none;
       box-shadow: none;
       outline: none;
-      font-size: 15rem;
+      font-size: 1.5rem;
       height: 40px;
       border-bottom: $border-white;
       color: $c-white;
       box-sizing: border-box;
 
       @media only screen and (min-width: $breakpoints-xxl) {
-        font-size: 18rem;
+        font-size: 1.8rem;
       }
 
       &::-webkit-input-placeholder {
@@ -107,6 +107,14 @@
       }
     }
 
+    .react-datepicker__day-name,
+    .react-datepicker__day,
+    .react-datepicker__time-name {
+      width: 3rem;
+      line-height: 3rem;
+      font-size: 1.4rem;
+    }
+
     option {
       color: $c-black;
 
@@ -118,11 +126,11 @@
 
   &__validation {
     color: $c-red;
-    font-size: 12rem;
+    font-size: 1.2rem;
     margin: $gap-xxsmall 0 $gap-regular;
 
     @media only screen and (min-width: $breakpoints-xxl) {
-      font-size: 14rem;
+      font-size: 1.4rem;
     }
   }
 
@@ -137,6 +145,8 @@
   }
 
   &__success {
+    font-size: 1.4rem;
+    text-align: center;
     position: relative;
     top: 30%;
     transform: translateY(100%);

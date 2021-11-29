@@ -1,9 +1,9 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .button {
   padding: $gap-xsmall;
   margin: $gap-xsmall;
-  font-size: 14rem;
+  font-size: 1.4rem;
   cursor: pointer;
   border: none;
   transition: color 0.15s ease-in-out;
@@ -13,7 +13,7 @@
   }
 
   @media only screen and (min-width: $breakpoints-xxl) {
-    font-size: 18rem;
+    font-size: 1.8rem;
   }
 
   &--primary {
@@ -53,7 +53,7 @@
   &--banner {
     background-color: transparent;
     color: $c-nobel;
-    font-size: 16rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     padding: $gap-xxsmall $gap-xsmall;
     border-bottom: $border-nobel;
@@ -80,7 +80,7 @@
   }
 
   &--filter {
-    font-size: 18rem;
+    font-size: 1.8rem;
     text-transform: capitalize;
     background-color: transparent;
     color: $c-twine;

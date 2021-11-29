@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .logo {
   padding: $gap-xsmall;
@@ -6,12 +6,12 @@
   &__name {
     text-align: center;
     text-transform: uppercase;
-    font-size: 24rem;
+    font-size: 2.4rem;
     color: $c-white;
 
     &--secondary {
       display: block;
-      font-size: 16rem;
+      font-size: 1.6rem;
     }
   }
 }

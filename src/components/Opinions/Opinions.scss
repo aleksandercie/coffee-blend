@@ -15,7 +15,7 @@
 .opinion {
   padding: $gap-regular;
   background-color: $c-twine;
-  font-size: 16rem;
+  font-size: 1.6rem;
 
   @media only screen and (min-width: $breakpoints-md) {
     width: 20%;
@@ -28,20 +28,20 @@
 
   &__customer {
     margin: $gap-regular 0 0;
-    font-size: 14rem;
+    font-size: 1.4rem;
 
     @media only screen and (min-width: $breakpoints-xxl) {
-      font-size: 18rem;
+      font-size: 1.8rem;
     }
   }
 
   &__city {
     margin: $gap-xsmall 0;
-    font-size: 12rem;
+    font-size: 1.2rem;
     opacity: 0.6;
 
     @media only screen and (min-width: $breakpoints-xxl) {
-      font-size: 16rem;
+      font-size: 1.6rem;
     }
   }
 }

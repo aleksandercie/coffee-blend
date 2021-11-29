@@ -34,7 +34,7 @@
   }
 
   &__title {
-    font-size: 20rem;
+    font-size: 2rem;
     overflow: auto;
     font-weight: 400;
     text-transform: uppercase;
@@ -42,30 +42,30 @@
     text-align: center;
 
     @media only screen and (min-width: $breakpoints-md) {
-      font-size: 32rem;
+      font-size: 3.2rem;
     }
   }
 
   &__subtitle {
-    font-size: 32rem;
+    font-size: 3.2rem;
     overflow: auto;
     margin-bottom: $gap-xsmall;
     text-align: center;
     overflow: hidden;
 
     @media only screen and (min-width: $breakpoints-md) {
-      font-size: 48rem;
+      font-size: 4.8rem;
     }
   }
 
   &__description {
-    font-size: 15rem;
+    font-size: 1.5rem;
     overflow: auto;
     margin: $gap-regular auto;
     text-align: center;
 
     @media only screen and (min-width: $breakpoints-md) {
-      font-size: 20rem;
+      font-size: 2rem;
     }
   }
 

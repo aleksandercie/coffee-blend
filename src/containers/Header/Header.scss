@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .header {
   position: fixed;
@@ -20,7 +20,7 @@
 
   &__icon {
     &--hamburger {
-      font-size: 18rem;
+      font-size: 1.8rem;
       @media only screen and (min-width: $breakpoints-md) {
         display: none;
       }

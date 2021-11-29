@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .navigation {
   &--mobile {
@@ -28,10 +28,10 @@
     padding: $gap-regular;
     text-transform: uppercase;
     font-weight: 300;
-    font-size: 14rem;
+    font-size: 1.4rem;
 
     @media only screen and (min-width: $breakpoints-xxl) {
-      font-size: 18rem;
+      font-size: 1.8rem;
     }
   }
 

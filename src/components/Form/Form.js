@@ -6,6 +6,8 @@ import Container from "../../common/Container/Container";
 import Typography from "../../common/Typography/Typography";
 import Button from "../../common/Button/Button";
 import "./Form.scss";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const Form = ({ btnVariant }) => {
   const [context, setContext] = useContext(ContextReservation);
@@ -19,7 +21,7 @@ const Form = ({ btnVariant }) => {
     "form__success--active": reservationAccepted,
   });
 
-  const currentDate = new Date().toLocaleDateString("fr-CA");
+  const currentDate = new Date();
 
   return (
     <Container customClass="form" role="form">
@@ -52,6 +54,10 @@ const Form = ({ btnVariant }) => {
           }
           if (!values.date) {
             errors.date = "Select date appointment";
+          } else if (values.date) {
+            if (values.date <= currentDate) {
+              errors.date = "Select a date from the coming days";
+            }
           }
           if (!values.time) {
             errors.time = "Select time appointment";
@@ -64,9 +70,6 @@ const Form = ({ btnVariant }) => {
         }}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
-            const date = values.date.split(/\D/g);
-            const newFormatDate = [date[2], date[1], date[0]].join("-");
-            values.date = newFormatDate;
             setContext(values);
           }, 400);
         }}
@@ -79,6 +82,7 @@ const Form = ({ btnVariant }) => {
           handleBlur,
           handleSubmit,
           isSubmitting,
+          setFieldValue,
         }) => (
           <form onSubmit={handleSubmit} className={firstStageClasses}>
             <Container customClass="form__input">
@@ -171,14 +175,12 @@ const Form = ({ btnVariant }) => {
             <Container customClass="form__input">
               <label name="date" className="form__label">
                 Date
-                <Field
-                  type="date"
-                  name="date"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.date}
-                  min={currentDate}
-                  max="2022-12-31"
+                <DatePicker
+                  selected={values.date}
+                  dateFormat="d MMMM yyyy"
+                  className="form-control"
+                  name="startDate"
+                  onChange={(date) => setFieldValue("date", date)}
                 />
               </label>
               <span className="form__validation">
@@ -198,7 +200,11 @@ const Form = ({ btnVariant }) => {
       <Container customClass={succesStageClasses}>
         <Typography variant="p" customClass="form__description">
           {reservationAccepted &&
-            `Your table for ${context.guest} quests will be ready ${context.date} at ${context.time} `}
+            `Your table for ${
+              context.guest
+            } quests will be ready ${context.date.toLocaleDateString(
+              "en-GB"
+            )} at ${context.time} `}
         </Typography>
         <Typography variant="p" customClass="form__description" align="center">
           See you!
