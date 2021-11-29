@@ -119,13 +119,22 @@
       }
     }
 
-    option {
-      color: $c-black;
+    select {
+      text-align-last: center;
       text-align: center;
+      -ms-text-align-last: center;
+      -moz-text-align-last: center;
 
       @media only screen and (min-width: $breakpoints-lg) {
+        text-align-last: left;
         text-align: left;
+        -ms-text-align-last: left;
+        -moz-text-align-last: left;
       }
+    }
+
+    option {
+      color: $c-black;
 
       &:first-child {
         display: none;
