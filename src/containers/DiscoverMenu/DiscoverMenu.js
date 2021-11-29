@@ -1,6 +1,5 @@
 import React from "react";
 import FadeIn from "../../components/FadeIn/FadeIn";
-import { trackWindowScroll } from "react-lazy-load-image-component";
 import Container from "../../common/Container/Container";
 import Heading from "../../components/Heading/Heading";
 import Button from "../../common/Button/Button";
@@ -40,4 +39,4 @@ const DiscoverMenu = () => {
   );
 };
 
-export default trackWindowScroll(DiscoverMenu);
+export default DiscoverMenu;

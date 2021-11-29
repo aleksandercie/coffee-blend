@@ -3,7 +3,6 @@ import classNames from "classnames";
 import Container from "../../common/Container/Container";
 import Typography from "../../common/Typography/Typography";
 import Image from "../../common/Image/Image";
-import { trackWindowScroll } from "react-lazy-load-image-component";
 import "./Products.scss";
 
 const Products = ({ products, variant }) => {
@@ -47,4 +46,4 @@ const Products = ({ products, variant }) => {
   return <Container customClass="products">{renderProducts}</Container>;
 };
 
-export default trackWindowScroll(Products);
+export default Products;

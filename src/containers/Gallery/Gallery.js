@@ -1,6 +1,5 @@
 import React from "react";
 import FadeIn from "../../components/FadeIn/FadeIn";
-import { trackWindowScroll } from "react-lazy-load-image-component";
 import Container from "../../common/Container/Container";
 import Image from "../../common/Image/Image";
 import { gallery } from "../../content/gallery";
@@ -24,4 +23,4 @@ const Gallery = () => {
   );
 };
 
-export default trackWindowScroll(Gallery);
+export default Gallery;
