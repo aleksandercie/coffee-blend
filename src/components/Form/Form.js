@@ -5,9 +5,9 @@ import { Formik, Field } from "formik";
 import Container from "../../common/Container/Container";
 import Typography from "../../common/Typography/Typography";
 import Button from "../../common/Button/Button";
-import "./Form.scss";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "./Form.scss";
 
 const Form = ({ btnVariant }) => {
   const [context, setContext] = useContext(ContextReservation);
