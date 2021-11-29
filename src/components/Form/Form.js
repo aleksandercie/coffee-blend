@@ -9,12 +9,10 @@ import "./Form.scss";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const Form = ({ btnVariant, customClass }) => {
+const Form = ({ btnVariant }) => {
   const [context, setContext] = useContext(ContextReservation);
 
   const reservationAccepted = context.email !== "";
-
-  const formClasses = classNames("form", customClass);
 
   const firstStageClasses = classNames("form__container", {
     "form__container--hide": reservationAccepted,
@@ -26,7 +24,7 @@ const Form = ({ btnVariant, customClass }) => {
   const currentDate = new Date();
 
   return (
-    <Container customClass={formClasses} role="form">
+    <Container customClass="form" role="form">
       <Typography variant="h2" customClass="form__title">
         {reservationAccepted ? "WE CAN'T WAIT FOR YOU" : "BOOK A TABLE"}
       </Typography>
