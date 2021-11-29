@@ -1,10 +1,10 @@
-import React from 'react';
-import Slider from 'react-slick';
-import Banner from '../../components/Banner/Banner';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import './MainSlider.scss';
-import Container from '../../common/Container/Container';
+import React from "react";
+import Slider from "react-slick";
+import Banner from "../../components/Banner/Banner";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./MainSlider.scss";
+import Container from "../../common/Container/Container";
 
 const MainSlider = ({ slides }) => {
   const settings = {

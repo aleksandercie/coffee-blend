@@ -1,8 +1,12 @@
 const photo = "https://i.ibb.co/bdt0vJ8/slide-1.webp";
+const photo1Mobile = "https://i.ibb.co/wB8qD5B/slide-1-mobile.webp";
 
 export const contactBanner = {
   title: "contact us",
-  photo: photo,
+  photo: {
+    desktop: photo,
+    mobile: photo1Mobile,
+  },
   subtitle: null,
   description: null,
   buttons: [
@@ -15,7 +19,10 @@ export const contactBanner = {
 };
 export const menuBanner = {
   title: "our menu",
-  photo: photo,
+  photo: {
+    desktop: photo,
+    mobile: photo1Mobile,
+  },
   subtitle: null,
   description: null,
   buttons: [
@@ -28,7 +35,10 @@ export const menuBanner = {
 };
 export const aboutBanner = {
   title: "about us",
-  photo: photo,
+  photo: {
+    desktop: photo,
+    mobile: photo1Mobile,
+  },
   subtitle: null,
   description: null,
   buttons: [

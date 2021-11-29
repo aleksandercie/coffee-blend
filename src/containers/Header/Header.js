@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import Logo from '../../components/Logo/Logo';
-import Navigation from '../../components/Navigation/Navigation';
-import MobileMenu from '../../components/MobileMenu/MobileMenu';
-import Hamburger from '../../components/Hamburger/Hamburger';
-import { navigation } from '../../content/navigation';
-import { APPLY_PREVENT_SCROLL_BODY_CLASS } from './constants';
-import './Header.scss';
+import React, { useState, useEffect } from "react";
+import Logo from "../../components/Logo/Logo";
+import Navigation from "../../components/Navigation/Navigation";
+import MobileMenu from "../../components/MobileMenu/MobileMenu";
+import Hamburger from "../../components/Hamburger/Hamburger";
+import { navigation } from "../../content/navigation";
+import { APPLY_PREVENT_SCROLL_BODY_CLASS } from "./constants";
+import { isBrowser } from "../../helpers/isBrowser";
+import "./Header.scss";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
   const toggleMenu = () => setOpen(!isOpen);
-  const isBrowser = () => typeof window !== 'undefined';
 
   useEffect(() => {
     if (!isBrowser()) return;
