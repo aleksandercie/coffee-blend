@@ -1,13 +1,12 @@
-import React, { useState, useEffect, Suspense, lazy } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../../components/Logo/Logo";
 import Navigation from "../../components/Navigation/Navigation";
 import Hamburger from "../../components/Hamburger/Hamburger";
+import MobileMenu from "../../components/MobileMenu/MobileMenu";
 import { navigation } from "../../content/navigation";
 import { APPLY_PREVENT_SCROLL_BODY_CLASS } from "./constants";
 import { isBrowser } from "../../helpers/isBrowser";
 import "./Header.scss";
-
-const MobileMenu = lazy(() => import("../../components/MobileMenu/MobileMenu"));
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -27,13 +26,11 @@ const Header = () => {
       <Logo />
       <Navigation navigation={navigation} variant="desktop" />
       <Hamburger toggleMenu={toggleMenu} isOpen={isOpen} />
-      <Suspense fallback={<div />}>
-        <MobileMenu
-          navigation={navigation}
-          isOpen={isOpen}
-          toggleMenu={toggleMenu}
-        />
-      </Suspense>
+      <MobileMenu
+        navigation={navigation}
+        isOpen={isOpen}
+        toggleMenu={toggleMenu}
+      />
     </header>
   );
 };
