@@ -1,24 +1,35 @@
 @import "../../styles/global.scss";
 
 .testimony {
-  padding: $gap-regular 0 0;
+  padding: 0;
   justify-content: space-between;
-  background-image: url("https://i.ibb.co/446yZPd/slide-3.webp");
+  background-color: $c-black;
   @include display-column;
-  @include background;
 
   @media only screen and (min-width: $breakpoints-md) {
+    background-image: url("https://i.ibb.co/446yZPd/slide-3.webp");
     min-height: 600px;
     background-attachment: fixed;
+    padding: $gap-regular 0 0;
+    @include background;
   }
 
   &__container {
-    max-width: 340px;
-    padding: 0 $gap-regular;
-    margin: 0 auto;
+    background-image: url("https://i.ibb.co/488cGbH/slide-3-mobile.webp");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: $gap-xlarge $gap-regular;
+
+    @media only screen and (min-width: $breakpoints-sm) {
+      padding: $gap-xlarge;
+    }
 
     @media only screen and (min-width: $breakpoints-md) {
       margin: $gap-regular auto;
+      max-width: 340px;
+      padding: 0 $gap-regular;
+      background-image: none;
     }
   }
 }

@@ -64,6 +64,16 @@ $opacity-on: 1;
 /* Mixins
 ************************************************************** */
 
+@mixin placeholder {
+  color: $c-white;
+  opacity: 1;
+  text-align: center;
+
+  @media only screen and (min-width: $breakpoints-lg) {
+    text-align: left;
+  }
+}
+
 @mixin start-animation {
   top: 70%;
   opacity: $opacity-off;

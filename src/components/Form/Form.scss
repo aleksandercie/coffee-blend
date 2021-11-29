@@ -56,39 +56,38 @@
       border-bottom: $border-white;
       color: $c-white;
       box-sizing: border-box;
+      text-align: center;
+
+      @media only screen and (min-width: $breakpoints-lg) {
+        text-align: left;
+      }
 
       @media only screen and (min-width: $breakpoints-xxl) {
         font-size: 18rem;
       }
 
       &::-webkit-input-placeholder {
-        color: $c-white;
-        opacity: 1;
+        @include placeholder;
       }
 
       &:-moz-placeholder {
-        color: $c-white;
-        opacity: 1;
+        @include placeholder;
       }
 
       &::-moz-placeholder {
-        color: $c-white;
-        opacity: 1;
+        @include placeholder;
       }
 
       &:-ms-input-placeholder {
-        color: $c-white;
-        opacity: 1;
+        @include placeholder;
       }
 
       &::-ms-input-placeholder {
-        color: $c-white;
-        opacity: 1;
+        @include placeholder;
       }
 
       &::placeholder {
-        color: $c-white;
-        opacity: 1;
+        @include placeholder;
       }
     }
 

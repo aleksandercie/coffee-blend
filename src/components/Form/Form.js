@@ -82,55 +82,67 @@ const Form = ({ btnVariant }) => {
         }) => (
           <form onSubmit={handleSubmit} className={firstStageClasses}>
             <Container customClass="form__input">
-              <Field
-                type="text"
-                name="name"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.name}
-                placeholder="Name"
-              />
+              <label name="name" className="form__label">
+                Name
+                <Field
+                  type="text"
+                  name="name"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.name}
+                  placeholder="Name"
+                />
+              </label>
               <span className="form__validation">
                 {errors.name && touched.name && errors.name}
               </span>
             </Container>
             <Container customClass="form__input">
-              <Field
-                type="email"
-                name="email"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.email}
-                placeholder="Email"
-              />
+              <label name="email" className="form__label">
+                Email
+                <Field
+                  type="email"
+                  name="email"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.email}
+                  placeholder="Email"
+                />
+              </label>
               <span className="form__validation">
                 {errors.email && touched.email && errors.email}
               </span>
             </Container>
             <Container customClass="form__input">
-              <Field
-                type="tel"
-                name="phone"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.phone}
-                placeholder="Number"
-              />
+              <label name="time" className="form__label">
+                Phone
+                <Field
+                  type="tel"
+                  name="phone"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.phone}
+                  placeholder="Number"
+                />
+              </label>
               <span className="form__validation">
                 {errors.phone && touched.phone && errors.phone}
               </span>
             </Container>
 
             <Container customClass="form__input">
-              <Field
-                type="date"
-                name="date"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.date}
-                min={currentDate}
-                max="2022-12-31"
-              />
+              <label name="date" className="form__label">
+                Date
+                <Field
+                  type="date"
+                  name="date"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.date}
+                  min={currentDate}
+                  max="2022-12-31"
+                />
+              </label>
               <span className="form__validation">
                 {errors.date && touched.date && errors.date}
               </span>
@@ -138,7 +150,7 @@ const Form = ({ btnVariant }) => {
 
             <Container customClass="form__input">
               <label name="time" className="form__label">
-                time
+                Time
                 <Field component="select" name="time">
                   <option value="" disabled>
                     Select time appointment
@@ -160,7 +172,7 @@ const Form = ({ btnVariant }) => {
             </Container>
             <Container customClass="form__input">
               <label name="guest" className="form__label">
-                guest
+                Guest
                 <Field component="select" name="guest">
                   <option value="" disabled>
                     Select table

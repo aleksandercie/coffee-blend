@@ -46,11 +46,12 @@
   }
 
   &--image {
-    background: url("https://i.ibb.co/d4DgfTy/coffee-background.webp");
-    @include background;
+    background-color: $c-black;
 
     @media only screen and (min-width: $breakpoints-md) {
+      background: url("https://i.ibb.co/d4DgfTy/coffee-background.webp");
       background-attachment: fixed;
+      @include background;
     }
 
     .info__icon {

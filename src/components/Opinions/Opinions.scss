@@ -1,14 +1,15 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .opinions {
   @include display-column;
 
-  margin: $gap-large auto 0;
+  margin: 0 auto;
 
   @media only screen and (min-width: $breakpoints-md) {
     @include display-row;
 
     align-items: flex-end;
+    margin: $gap-large auto 0;
   }
 }
 .opinion {

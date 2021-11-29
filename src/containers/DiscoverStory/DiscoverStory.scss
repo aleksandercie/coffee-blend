@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
 .discover-story {
   @include display-column;
@@ -15,6 +15,8 @@
   }
 
   .lazy-load-image-background {
+    width: 100%;
+
     @media only screen and (min-width: $breakpoints-md) {
       width: 50%;
       height: 600px;
