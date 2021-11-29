@@ -61,6 +61,10 @@
         font-size: 1.8rem;
       }
 
+      @media only screen and (min-width: $breakpoints-xxl) {
+        padding: 8px $gap-xsmall;
+      }
+
       &::-webkit-input-placeholder {
         @include placeholder;
       }
