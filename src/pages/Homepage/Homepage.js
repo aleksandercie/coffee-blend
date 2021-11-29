@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from "react";
 import MainSlider from "../../containers/MainSlider/MainSlider";
-import Intro from "../../containers/Intro/Intro";
 import { slides } from "../../content/slides";
 import { services } from "../../content/services";
 import { coffee } from "../../content/coffee";
@@ -15,6 +14,7 @@ const DiscoverCoffee = lazy(() =>
   import("../../containers/DiscoverCoffee/DiscoverCoffee")
 );
 const Info = lazy(() => import("../../containers/Info/Info"));
+const Intro = lazy(() => import("../../containers/Intro/Intro"));
 const Testimony = lazy(() => import("../../containers/Testimony/Testimony"));
 const Form = lazy(() => import("../../components/Form/Form"));
 const Gallery = lazy(() => import("../../containers/Gallery/Gallery"));
@@ -22,7 +22,9 @@ const Gallery = lazy(() => import("../../containers/Gallery/Gallery"));
 const Homepage = () => (
   <>
     <MainSlider slides={slides} />
-    <Intro />
+    <Suspense fallback={<div />}>
+      <Intro />
+    </Suspense>
     <Suspense fallback={<div />}>
       <DiscoverStory />
     </Suspense>

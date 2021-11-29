@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../../components/Logo/Logo";
 import Navigation from "../../components/Navigation/Navigation";
-import MobileMenu from "../../components/MobileMenu/MobileMenu";
 import Hamburger from "../../components/Hamburger/Hamburger";
+import MobileMenu from "../../components/MobileMenu/MobileMenu";
 import { navigation } from "../../content/navigation";
 import { APPLY_PREVENT_SCROLL_BODY_CLASS } from "./constants";
 import { isBrowser } from "../../helpers/isBrowser";
