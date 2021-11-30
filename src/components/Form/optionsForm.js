@@ -1,21 +1,4 @@
 export const formOptions = {
-  time: {
-    name: "time",
-    value: [
-      "Select time appointment",
-      "04:00pm",
-      "05:00pm",
-      "06:00pm",
-      "07:00pm",
-      "08:00pm",
-      "09:00pm",
-      "10:00pm",
-    ],
-  },
-  guest: {
-    name: "guest",
-    value: ["Select table", "2 guests", "4 guests", "6 guests", "8 guests"],
-  },
   typetext: [
     {
       name: "name",
@@ -51,6 +34,11 @@ export const formOptions = {
       values: ["Select table", "2 guests", "4 guests", "6 guests", "8 guests"],
     },
   ],
+  typeDate: {
+    name: "date",
+    placeholder: "Date",
+    format: "d MMMM yyyy",
+  },
 };
 
 export const currentDate = new Date();

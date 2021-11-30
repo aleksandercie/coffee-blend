@@ -22,6 +22,8 @@ const Form = ({ btnVariant }) => {
     "form__success--active": reservationAccepted,
   });
 
+  const { typeSelect, typetext, typeDate } = formOptions;
+
   const renderOptions = (options) =>
     options.map((option, index) => (
       <option
@@ -57,7 +59,7 @@ const Form = ({ btnVariant }) => {
           setFieldValue,
         }) => (
           <form onSubmit={handleSubmit} className={firstStageClasses}>
-            {formOptions.typetext.map((input) => {
+            {typetext.map((input) => {
               const { name, placeholder } = input;
               return (
                 <Container customClass="form__input" key={name}>
@@ -88,7 +90,7 @@ const Form = ({ btnVariant }) => {
                 </Container>
               );
             })}
-            {formOptions.typeSelect.map((select) => {
+            {typeSelect.map((select) => {
               const { name, placeholder, values } = select;
               return (
                 <Container customClass="form__input" key={name}>
@@ -108,12 +110,11 @@ const Form = ({ btnVariant }) => {
             })}
             <Container customClass="form__input">
               <label name="date" className="form__label">
-                Date
+                {typeDate.placeholder}
                 <DatePicker
                   selected={values.date}
-                  dateFormat="d MMMM yyyy"
-                  className="form-control"
-                  name="startDate"
+                  dateFormat={typeDate.format}
+                  name={typeDate.name}
                   onChange={(date) => setFieldValue("date", date)}
                 />
               </label>
