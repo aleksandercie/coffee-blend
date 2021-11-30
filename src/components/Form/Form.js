@@ -137,9 +137,9 @@ const Form = ({ btnVariant }) => {
           {reservationAccepted &&
             `Your table for ${
               context.guest
-            } quests will be ready ${context.date.toLocaleDateString(
-              "en-GB"
-            )} at ${context.time} `}
+            } will be ready ${context.date.toLocaleDateString("en-GB")} at ${
+              context.time
+            } `}
         </Typography>
         <Typography variant="p" customClass="form__description" align="center">
           See you!

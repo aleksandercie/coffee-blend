@@ -150,6 +150,7 @@
     text-align: center;
     position: relative;
     top: 30%;
+    max-width: 300px;
     transform: translateY(100%);
     opacity: 0;
     transition: transform 0.5s, opacity 0.7s;

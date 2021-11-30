@@ -89,5 +89,10 @@
         width: 100%;
       }
     }
+
+    &__success--active {
+      transform: translateY(-50%);
+      opacity: 1;
+    }
   }
 }
