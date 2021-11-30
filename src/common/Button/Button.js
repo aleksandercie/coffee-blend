@@ -11,6 +11,7 @@ const Button = ({
   onClick,
   id,
   tabIndex,
+  type,
 }) => {
   const buttonClasses = classNames("button", customClass, {
     [`button--${variant}`]: variant,
@@ -26,6 +27,7 @@ const Button = ({
       onClick={onClick}
       className={buttonClasses}
       tabIndex={tabIndex && -1}
+      type={type}
     >
       {name}
     </button>
