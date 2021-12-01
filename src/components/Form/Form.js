@@ -6,7 +6,12 @@ import Container from "../../common/Container/Container";
 import Typography from "../../common/Typography/Typography";
 import Button from "../../common/Button/Button";
 import DatePicker from "react-datepicker";
-import { initialValues, validate, formOptions } from "./optionsForm";
+import {
+  initialValues,
+  validate,
+  formOptions,
+  currentDate,
+} from "./optionsForm";
 import "react-datepicker/dist/react-datepicker.css";
 import "./Form.scss";
 
@@ -115,6 +120,8 @@ const Form = ({ btnVariant }) => {
                   selected={values.date}
                   dateFormat={typeDate.format}
                   name={typeDate.name}
+                  minDate={currentDate}
+                  portalId="root-portal"
                   onChange={(date) => setFieldValue("date", date)}
                 />
               </label>
