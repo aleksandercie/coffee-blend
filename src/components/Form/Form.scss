@@ -42,7 +42,7 @@
     input,
     select {
       width: 100%;
-      padding: $gap-xsmall;
+      padding: 8px $gap-xsmall;
       margin-top: $gap-small;
       background: transparent;
       border: none;
@@ -51,7 +51,7 @@
       -webkit-box-shadow: none;
       box-shadow: none;
       outline: none;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       height: 40px;
       border-bottom: $border-white;
       color: $c-white;
