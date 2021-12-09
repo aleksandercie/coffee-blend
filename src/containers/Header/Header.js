@@ -15,7 +15,6 @@ const Header = () => {
   useEffect(() => {
     if (!isBrowser()) return;
     const bodyElement = window.document.body;
-    console.error = () => {};
 
     isOpen && bodyElement.classList.add(APPLY_PREVENT_SCROLL_BODY_CLASS);
     !isOpen && bodyElement.classList.remove(APPLY_PREVENT_SCROLL_BODY_CLASS);
